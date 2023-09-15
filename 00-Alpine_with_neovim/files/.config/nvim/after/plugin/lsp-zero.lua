@@ -12,7 +12,7 @@ end
 
 lsp.preset('recommended')
 
-lspconfig.sumneko_lua.setup {
+lspconfig.lua_la.setup {
   settings = {
     Lua = {
       diagnostics = {
