@@ -1,2 +1,470 @@
-# myDockersFiles
-My docker files !!
+<table border="0">
+<tr>
+<td width="20%" align="center">
+<img src="images/abcdTux-128.png" alt="logo a b c d Tux">
+</td>
+<td width="60%" align="center">
+<br>
+<h1>myDockerFiles</h1>
+by abcdTux<br><br>
+niveau / level <strong>d</strong>
+</td>
+<td width="20%" align="center">
+<img src="images/level_abcd_d-128.png" alt="level d">
+</td>
+</tr>
+</table>
+
+------------
+
+<table border="0">
+
+<tr>
+<td width="8%">
+<img src="images/flag_fr-25.png" alt="french flag">
+</td>
+<td width="42%">
+Ce dépôt contient mes fichiers et mes utilitaires permettant de gérer mes containeurs Docker.
+</td>
+<td width="8%">
+<img src="images/flag_uk-25.png" alt="french flag">
+</td>
+<td width="42%">
+This repository contains my files and utilities for managing my Docker containers.
+</td>
+</tr>
+
+<tr>
+<td colspan="2">
+Vous trouverez un README.md contenant à la fois la langue de Shakespeare et celle de Molière.
+</td>
+<td colspan="2">
+You will find a README.md containing both the language of Shakespeare and that of Molière.
+</td>
+</tr>
+
+</table>
+
+------------
+
+<table border="0">
+
+<tr>
+<td width="8%">
+<img src="images/flag_fr-25.png" alt="french flag">
+</td>
+<td width="42%">
+<h2>Comment cloner un répertoire&nbsp;?</h2>
+</td>
+<td width="8%">
+<img src="images/flag_uk-25.png" alt="french flag">
+</td>
+<td width="42%">
+<h2>How to clone a directory&nbsp;?</h2>
+</td>
+</tr>
+
+<tr>
+<td colspan="2">
+&laquo;&nbsp;git&nbsp;&raquo; possède une fonctionnalité permettant de cloner uniquement un sous-répertoire d'un repository.<br>
+Les quatre commandes ci-dessous permettent de cloner le dossier 00-Alpine_with_neovim.
+</td>
+<td colspan="2">
+"git" has a feature that allows cloning only a subdirectory of a repository.<br> 
+The four commands below allow cloning the directory 00-Alpine_with_neovim.
+</td>
+</tr>
+
+</table>
+
+```
+git clone --depth 1 --filter=blob:none \
+  --sparse https://github.com/abcdtux/myDockerFiles.git \
+  --no-checkout
+cd myDockerFiles
+git sparse-checkout set 00-Alpine_with_neovim
+git checkout master
+```
+
+------------
+
+<table border="0">
+
+<tr>
+<td width="8%">
+<img src="images/flag_fr-25.png" alt="french flag">
+</td>
+<td width="42%">
+<h2>Dépendances</h2>
+</td>
+<td width="8%">
+<img src="images/flag_uk-25.png" alt="french flag">
+</td>
+<td width="42%">
+<h2>Dependencies</h2>
+</td>
+</tr>
+
+<tr>
+<td colspan="2">
+Certains des fichiers Docker nécessitent des dépendances provenant d'autres fichiers Docker pour fonctionner correctement. Celles-ci seront précisées dans le fichier README.md contenu dans chacun des sous-répertoires.
+</td>
+<td colspan="2">
+Some of the Docker files require dependencies from other Docker files to function properly. These will be specified in the README.md file contained within each of the subdirectories.
+</td>
+</tr>
+
+</table>
+
+----------
+
+<table border="0">
+
+<tr>
+<td width="45%" align="center">
+<img src="images/flag_fr-25.png" alt="french flag">
+</td>
+<td width="10%">
+</td>
+<td width="45%" align="center">
+<img src="images/flag_uk-25.png" alt="french flag">
+</td>
+</tr>
+
+<tr>
+<td align="right">
+<h2>Liste des fichiers</h2>
+</td>
+<td align="center">
+env.bash
+</td>
+<td>
+<h2>File list</h2>
+</td>
+</tr>
+
+<tr>
+<td align="right">
+Fichier contenant les variables d'environnement.
+</td>
+<td align="center">
+env.bash
+</td>
+<td>
+File containing the environment variables.
+</td>
+</tr>
+
+<tr>
+<td align="right">
+Fichier permettant la construction de l'image Docker.
+</td>
+<td align="center">
+Dockerfile
+</td>
+<td>
+File used to build the Docker image.
+</td>
+</tr>
+
+<tr>
+<td align="right">
+Shell des commandes build, run et connect.
+</td>
+<td align="center">
+run.bash
+</td>
+<td>
+Shell of build, run and connect commands.
+</td>
+</tr>
+
+</table>
+
+----------
+
+<table border="0">
+
+<tr>
+<td width="8%">
+<img src="images/flag_fr-25.png" alt="french flag">
+</td>
+<td width="42%">
+<h2>Paramètres</h2>
+</td>
+<td width="8%">
+<img src="images/flag_uk-25.png" alt="french flag">
+</td>
+<td width="42%">
+<h2>Settings</h2>
+</td>
+</tr>
+
+<tr>
+<td colspan="2">
+Pour chaque image, vous trouverez un fichier env.bash permettant la configuration de l'image ou l'exécution de Docker.
+</td>
+<td colspan="2">
+For each image, you will find an env.bash file allowing the configuration of the image or the execution of Docker.
+</td>
+</tr>
+
+</table>
+
+<br>
+
+<table border="0"> 
+
+<tr> 
+<td width="45%" align="center"> 
+<img src="images/flag_fr-25.png" alt="french flag"> 
+</td> 
+<td width="10%" align="center">
+</td> 
+<td width="45%" align="center"> 
+<img src="images/flag_uk-25.png" alt="french flag"> 
+</td> 
+</tr> 
+
+<tr> 
+<td align="right"> 
+UID de l'utilisateur de l'ordinateur. Cela permet d'avoir les fichiers générés par le conteneur sur les volumes, éditables en dehors du conteneur. Il peut être obtenu par la commande:<br>
+&laquo;&nbsp;id&nbsp;-u&nbsp;&raquo;
+</td> 
+<td align="center">
+USER_ID
+</td> 
+<td> 
+UID of computer user. This makes it possible to have the editable files generated by the container on volumes, outside the container. It can be obtained by the command:<br>
+"id&nbsp;-u"
+</td> 
+</tr> 
+
+<tr> 
+<td align="right"> 
+Nom d'utilisateur dans le conteneur. Peut être identique ou différent de l'ordinateur.
+</td> 
+<td align="center">
+USER_NAME
+</td> 
+<td> 
+Username in the container. May be the same or different from the computer.
+</td> 
+</tr> 
+
+<tr> 
+<td align="right"> 
+ID de l'un des groupes d'utilisateur de l'ordinateur. La liste de ces groupes peut être obtenue par la commande:
+&laquo;&nbsp;id&nbsp;&raquo;
+</td> 
+<td align="center">
+GROUP_ID
+</td> 
+<td> 
+ID of one of the computer's user groups. The list of these groups can be obtained by the command:
+"id"
+</td> 
+</tr> 
+
+<tr> 
+<td align="right"> 
+Nom du groupe dans le conteneur.
+</td> 
+<td align="center">
+GROUP_NAME
+</td> 
+<td> 
+Name of the group in the container.
+</td> 
+</tr> 
+
+<tr> 
+<td align="right"> 
+Nom du projet. Ce nom sera utilisé pour former le nom du conteneur.
+</td> 
+<td align="center">
+PROJECT
+</td> 
+<td> 
+Name of the project. This name will be used to form the container name.
+</td> 
+</tr> 
+
+<tr> 
+<td align="right"> 
+Répertoire local, donné par rapport au répertoire docker, monté dans le conteneur.
+</td> 
+<td align="center">
+DIR_LOCAL
+</td> 
+<td> 
+Local directory, given relative to the docker directory, mounted in the container.
+</td> 
+</tr> 
+
+<tr> 
+<td align="right">
+Répertoire personnel de l'utilisateur du conteneur pointant vers le répertoire DIR_LOCAL.
+</td> 
+<td align="center">
+DIR_CONTAINEUR
+</td> 
+<td> 
+Container user's home directory pointing to the DIR_LOCAL directory.
+</td> 
+</tr> 
+
+<tr> 
+<td align="right"> 
+Version principale de l'image générée. A cette valeur s'ajoute automatiquement le numéro de version de l'Alpine utilisée.
+</td> 
+<td align="center">
+VERSION_IMAGE
+</td> 
+<td> 
+Main version of the generated image. To this value is automatically added the version number of the Alpine used.
+</td> 
+</tr> 
+
+<tr> 
+<td align="right"> 
+Nom de l'image générée.
+</td> 
+<td align="center">
+IMAGE
+</td> 
+<td> 
+Name of the generated image.
+</td> 
+</tr> 
+
+<tr> 
+<td align="right"> 
+Ce paramètre est calculé automatiquement en ajustant le paramètre VERSION_IMAGE à la version présente dans le Dockerfile.
+</td> 
+<td align="center">
+VERSION
+</td> 
+<td> 
+This parameter is calculated automatically by adjusting the VERSION_IMAGE parameter to the version present in the Dockerfile.
+</td> 
+</tr> 
+
+</table> 
+
+----------
+
+<h2 align="center">Build, Run et Connect</h2>
+
+<table border="0"> 
+
+<tr> 
+<td width="45%" align="center"> 
+<img src="images/flag_fr-25.png" alt="french flag"> 
+</td> 
+<td width="10%" align="center">
+</td> 
+<td width="45%" align="center"> 
+<img src="images/flag_uk-25.png" alt="french flag"> 
+</td> 
+</tr> 
+
+<tr> 
+<td align="right"> 
+Recontruire entièrement l'image du docker.<br>
+Si cette option est présente, les options ci-dessous sont ignorées.
+</td> 
+<td align="center">
+./run.bash -B
+</td> 
+<td> 
+Completely rebuild the docker image.<br>
+If this option is present, the options below are ignored.
+</td> 
+</tr>
+
+<tr> 
+<td align="right"> 
+Contruire l'image du docker.<br>
+Si cette option est présente, les options ci-dessous sont ignorées.
+</td> 
+<td align="center">
+./run.bash -b
+</td> 
+<td> 
+Build the docker image.<br>
+If this option is present, the options below are ignored.
+</td> 
+</tr>
+
+<tr> 
+<td align="right"> 
+Exécute le conteneur.<br>
+</td> 
+<td align="center">
+./run.bash -r
+</td> 
+<td> 
+Run the conainer.<br>
+</td> 
+</tr>
+
+<tr> 
+<td align="right"> 
+Connexion au conteneur en exécutant la commande contenue dans la ligne CMD du Dockerfile.
+</td> 
+<td align="center">
+./run.bash -c
+</td> 
+<td> 
+Connect to the container by running the command contained in the CMD line of the Dockerfile.
+</td> 
+</tr>
+
+<tr> 
+<td align="right"> 
+Un lancement sans paramètres équivaut à un lancement avec les paramètres r et c.
+</td> 
+<td align="center">
+./run.bash 
+</td> 
+<td> 
+A launch without parameters is equivalent to a launch with parameters r and c.
+</td> 
+</tr>
+
+</table>
+
+----------
+
+<table border="0">
+
+<tr>
+<td width="8%">
+<img src="images/flag_fr-25.png" alt="french flag">
+</td>
+<td width="42%">
+<h2>Premier lancement</h2>
+</td>
+<td width="8%">
+<img src="images/flag_uk-25.png" alt="french flag">
+</td>
+<td width="42%">
+<h2>First launch</h2>
+</td>
+</tr>
+
+<tr>
+<td colspan="2">
+Chaque image contient un paragraphe concernant le premier lancement qui contient quelques commandes d'initialisation.<br>
+Lors du premier lancement et de la mise à jour de Packer, des erreurs peuvent (et vont) apparaître. Cela ne devrait plus être le cas par la suite.<br>
+Les paramètres de Packer peuvent être trouvés dans .config/nvim/lua/abcdtux/packer.lua.
+</td>
+<td colspan="2">
+Each image contains a paragraph regarding the first launch which contains some initialization commands.<br>
+When first launching and updating Packer, errors can (and will) appear. This should no longer be the case thereafter.<br>
+Packer settings can be found in .config/nvim/lua/abcdtux/packer.lua.
+</td>
+</tr>
+
+</table>
